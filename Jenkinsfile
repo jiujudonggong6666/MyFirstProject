@@ -4,8 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install Flask'
-                sh 'pip MyprojectFlask.py'
+                sh 'pip install -r /home/lijunxing/my-project/requirements.txt'
+                sh 'python MyprojectFlask.py'
             }
         }
     }
