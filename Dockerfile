@@ -8,12 +8,14 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
+
+RUN pip install -r /home/lijunxing/my-project/requirements.txt
 #RUN apt-get update
-RUN apt-get install python3-pip
-RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
-RUN  uwsgi --ini uwsgi.ini
-VOLUME /etc/nginx/sites-enabled/myproject .myproject
+#RUN apt-get install python3-pip
+#RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
+#RUN  uwsgi --ini uwsgi.ini
+#VOLUME /etc/nginx/sites-enabled/myproject .myproject
 #CMD 运行以下命令
-CMD ["nginx"]
+CMD ["python","run.py"]
 
 EXPOSE 8080
