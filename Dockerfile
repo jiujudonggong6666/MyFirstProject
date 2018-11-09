@@ -3,6 +3,7 @@
 FROM ubuntu
 FROM python
 FROM nginx
+FROM pip
 
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
@@ -10,7 +11,7 @@ MAINTAINER 464983934@qq.com
 COPY . /home/lijunxing/my-project
 
 #RUN apt-get update
-RUN apt-get install python3-pip
+#RUN apt-get install python3-pip
 RUN pip install -r /home/lijunxing/my-project/requirements.txt
 #RUN apt-get update
 #RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
