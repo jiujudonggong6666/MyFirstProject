@@ -8,7 +8,7 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
-RUN git pull origin master
+#RUN git pull origin master
 RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
 RUN  uwsgi --ini uwsgi.ini
 VOLUME /etc/nginx/sites-enabled/myproject .myproject
