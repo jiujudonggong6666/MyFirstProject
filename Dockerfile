@@ -8,7 +8,7 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
-RUN apt-get update
+#RUN apt-get update
 RUN  pip install -r /home/lijunxing/my-project/requirements.txt
 RUN  uwsgi --ini uwsgi.ini
 VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
