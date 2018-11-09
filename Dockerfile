@@ -9,7 +9,8 @@ MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
 
-RUN pip install -r /home/lijunxing/my-project/requirements.txt
+RUN apt-get update
+RUN pip3 install -r /home/lijunxing/my-project/requirements.txt
 #RUN apt-get update
 #RUN apt-get install python3-pip
 #RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
