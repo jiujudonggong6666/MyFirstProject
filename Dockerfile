@@ -3,14 +3,13 @@
 FROM ubuntu
 FROM python
 FROM nginx
-FROM python-pip
 
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
 RUN git pull origin master
-RUN  pip install -r /home/lijunxing/my-project/requirements.txt
+RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
 RUN  uwsgi --ini uwsgi.ini
 VOLUME /etc/nginx/sites-enabled/myproject .myproject
 #CMD 运行以下命令
