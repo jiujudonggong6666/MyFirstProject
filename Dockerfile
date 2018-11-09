@@ -8,6 +8,7 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
+RUN apt-get update
 RUN apt-get install python3-pip
 RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
 RUN  uwsgi --ini uwsgi.ini
