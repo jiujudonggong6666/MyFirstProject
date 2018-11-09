@@ -1,0 +1,17 @@
+ server {
+
+        listen 8080;
+
+        server_name 0.0.0.0;
+
+
+
+        location / {
+
+                include uwsgi_params;
+		uwsgi_pass unix:/home/lijunxing/MyFirstProject/uwsgi.sock;
+                #uwsgi_pass  127.0.0.1:8000;  #注：这里的端口8000和uwsgi的里配的是同一个端口，也就是你定义的服务器启动的端口，因为nginx和uwsgi需要通过这个端口进行交互
+
+        }
+
+ }

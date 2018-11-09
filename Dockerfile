@@ -8,11 +8,11 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
-#RUN apt-get update
+RUN git pull origin master
 RUN apt-get install python-pip
 RUN  pip install -r /home/lijunxing/my-project/requirements.txt
 RUN  uwsgi --ini uwsgi.ini
-VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
+VOLUME /etc/nginx/sites-enabled/myproject .myproject
 #CMD 运行以下命令
 CMD ["nginx"]
 
