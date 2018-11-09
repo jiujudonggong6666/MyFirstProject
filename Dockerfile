@@ -8,10 +8,10 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/my-project
-CMD ["apt-get","update" ]
-CMD ["apt-get","install","python3-pip"]
-CMD  ["pip3","install","-r","/home/lijunxing/my-project/requirements.txt"]
-CMD  ["uwsgi","--ini","uwsgi.ini"]
+CMD apt-get update
+RUN apt-get install python3-pip
+RUN  pip3 install -r /home/lijunxing/my-project/requirements.txt
+RUN  uwsgi --ini uwsgi.ini
 VOLUME /etc/nginx/sites-enabled/myproject .myproject
 #CMD 运行以下命令
 CMD ["nginx"]
