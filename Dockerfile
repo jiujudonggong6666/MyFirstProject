@@ -12,6 +12,7 @@ COPY . /home/lijunxing/MyFirstProject
 #RUN  uwsgi --ini uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #CMD 运行以下命令
-CMD ["nginx"]
+#CMD ["nginx"]
+RUN nginx
 
 EXPOSE 80
