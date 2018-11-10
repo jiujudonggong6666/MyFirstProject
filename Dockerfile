@@ -7,8 +7,8 @@ MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
 
-RUN apt-get update
-RUN apt-get install -y nginx
+#RUN apt-get update
+#RUN apt-get install -y nginx
 COPY default /etc/nginx/sites-enabled
 WORKDIR /home/lijunxing/MyFirstProject
 #RUN python /home/lijunxing/MyFirstProject/run.py
