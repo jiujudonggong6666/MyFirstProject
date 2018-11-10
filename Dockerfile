@@ -13,4 +13,4 @@ COPY default /etc/nginx/sites-enabled
 WORKDIR /home/lijunxing/MyFirstProject
 #RUN python /home/lijunxing/MyFirstProject/run.py
 EXPOSE 80
-CMD nginx -g 'daemon off;'
+#CMD nginx -g 'daemon off;'
