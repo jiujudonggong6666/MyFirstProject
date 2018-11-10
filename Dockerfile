@@ -10,7 +10,7 @@ MAINTAINER 464983934@qq.com
 COPY . /home/lijunxing/MyFirstProject
 WORKDIR /home/lijunxing/MyFirstProject
 RUN  pip3 install -r requirements.txt
-RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
+RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini --daemonize /home/lijunxing/MyFirstProject/log/uwsgi.log
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #RUN whereis nginx
 #CMD ["nginx", "-g", "daemon off;"]
