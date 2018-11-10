@@ -8,8 +8,10 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
+
+RUN pip3
 #RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
-RUN pip3 install Flask
+#RUN pip3 install Flask
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/
 
 #CMD  ["uwsgi","/home/lijunxing/MyFirstProject/autodelopy.py"]
