@@ -8,11 +8,9 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
-#RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
-#RUN  uwsgi --ini uwsgi.ini
-#VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
-#CMD 运行以下命令
-#CMD ["nginx"]
+RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
+RUN  uwsgi --ini uwsgi.ini
+VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 RUN nginx
 
-EXPOSE 80
+EXPOSE 8080
