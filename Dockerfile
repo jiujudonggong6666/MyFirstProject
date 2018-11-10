@@ -16,4 +16,5 @@ MAINTAINER 464983934@qq.com
 #CMD ["nginx", "-g", "daemon off;"]
 #CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
 #EXPOSE 8080
-CMD ["nginx"]
+#CMD ["nginx"]
+RUN nginx
