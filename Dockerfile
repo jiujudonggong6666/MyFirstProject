@@ -9,7 +9,7 @@ MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
 RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
-RUN  uwsgi --ini uwsgi.ini
+RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #RUN nginx
 
