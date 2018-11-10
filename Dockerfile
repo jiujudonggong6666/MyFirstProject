@@ -6,10 +6,10 @@ FROM nginx
 
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
-WORKDIR /home/lijunxing/MyFirstProject
+#WORKDIR /home/lijunxing/MyFirstProject
 
 COPY . /home/lijunxing/MyFirstProject
-RUN  pip3 install -r requirements.txt
+RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
 #RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #RUN whereis nginx
