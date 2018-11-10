@@ -9,8 +9,8 @@ MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
 RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
-RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
-#VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
+CMD  ["uwsgi","/home/lijunxing/MyFirstProject/uwsgi.ini"]
+VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/
 RUN nginx
 
 EXPOSE 8080
