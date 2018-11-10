@@ -6,11 +6,13 @@ FROM ubuntu:16.04
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
-
+WORKDIR /home/lijunxing/MyFirstProject
 RUN apt-get update
 RUN apt-get install -y nginx
 COPY default /etc/nginx/sites-enabled
-WORKDIR /home/lijunxing/MyFirstProject
+RUN pip install requirements.txt
+RUN uswgi --ini uwsgi.ini
+
 #RUN python /home/lijunxing/MyFirstProject/run.py
 EXPOSE 80
 #CMD nginx -g 'daemon off;'
