@@ -13,5 +13,5 @@ RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #CMD ["nginx"]
 #CMD ["nginx", "-g", "daemon off;"]
-RUN nginx
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
 EXPOSE 8080
