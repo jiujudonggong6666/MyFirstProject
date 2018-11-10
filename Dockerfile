@@ -16,3 +16,4 @@ RUN  pip3 install -r requirements.txt
 #CMD ["nginx", "-g", "daemon off;"]
 #CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
 EXPOSE 8080
+CMD ["nginx"]
