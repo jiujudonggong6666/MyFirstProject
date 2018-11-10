@@ -18,3 +18,5 @@ MAINTAINER 464983934@qq.com
 #EXPOSE 8080
 #CMD ["nginx"]
 RUN nginx
+
+EXPOSE 80
