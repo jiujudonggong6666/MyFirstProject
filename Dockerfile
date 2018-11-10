@@ -18,6 +18,6 @@ COPY . /home/lijunxing/my-project
 #RUN  uwsgi --ini uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject .myproject
 #CMD 运行以下命令
-CMD ["python","run.py"]
+CMD ["python","/home/lijunxing/MyFirstProject/run.py"]
 
 EXPOSE 8080
