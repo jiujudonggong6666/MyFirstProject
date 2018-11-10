@@ -14,6 +14,6 @@ RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
 #CMD  ["uwsgi","/home/lijunxing/MyFirstProject/autodelopy.py"]
 #RUN uwsgi --ini uwsgi.ini
 #CMD ["nginx"]
-RUN nginx
+#RUN nginx
 
 EXPOSE 8080
