@@ -12,6 +12,6 @@ RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
 RUN  uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
 #CMD ["nginx"]
-ENTRYPOINT ["/usr/sbin/nginx"]
+CMD ["nginx", "-g", "daemon off;"]
 
 EXPOSE 8080
