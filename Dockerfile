@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install -y nginx
 COPY default /etc/nginx/sites-enabled
 RUN pip3 install -r requirements.txt
-RUN uswgi --ini uwsgi.ini
+RUN  /usr/local/bin/uwsgi --ini /home/lijunxing/MyFirstProject/uwsgi.ini
 
 #RUN python /home/lijunxing/MyFirstProject/run.py
 EXPOSE 80
