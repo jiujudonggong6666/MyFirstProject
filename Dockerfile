@@ -10,7 +10,7 @@ MAINTAINER 464983934@qq.com
 COPY . /home/lijunxing/MyFirstProject
 RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/
-RUN nginx
+CMD ["nginx"]
 #CMD  ["uwsgi","/home/lijunxing/MyFirstProject/autodelopy.py"]
 RUN uwsgi --ini uwsgi.ini
 
