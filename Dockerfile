@@ -3,7 +3,6 @@
 FROM ubuntu
 FROM python
 FROM nginx
-FROM pip
 
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
