@@ -7,7 +7,7 @@ FROM nginx
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
 
-#COPY . /home/lijunxing/MyFirstProject
+COPY . /home/lijunxing/MyFirstProject
 #RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
 #RUN  uwsgi --ini uwsgi.ini
 #VOLUME /etc/nginx/sites-enabled/myproject /etc/nginx/sites-enabled/myproject
