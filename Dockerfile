@@ -5,6 +5,7 @@ FROM ubuntu:16.04
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
 
+COPY . /home/lijunxing/MyFirstProject
 #RUN sudo apt-get update
 
 #RUN sudo apt-get install nginx
