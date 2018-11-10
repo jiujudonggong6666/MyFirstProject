@@ -113,4 +113,4 @@ CMD ["nginx", "-g", "daemon off;"]
 #RUN whereis nginx
 #CMD ["nginx", "-g", "daemon off;"]
 #CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
-EXPOSE 8080
+#EXPOSE 8080
