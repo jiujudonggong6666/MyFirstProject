@@ -1,7 +1,7 @@
 # 基础镜像信息
 # 1、第一行必须指定 基础镜像信息
 FROM ubuntu:16.04
-FROM python
+#FROM python
 #FROM nginx
 
 # 2、维护者信息
