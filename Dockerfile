@@ -2,7 +2,7 @@
 # 1、第一行必须指定 基础镜像信息
 FROM ubuntu:16.04
 #FROM python
-#FROM nginx
+FROM nginx:latest
 
 # 2、维护者信息
 MAINTAINER 464983934@qq.com
