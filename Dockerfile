@@ -8,6 +8,7 @@ FROM nginx
 MAINTAINER 464983934@qq.com
 
 COPY . /home/lijunxing/MyFirstProject
+RUN apt-get update
 
 RUN pip3
 #RUN  pip3 install -r /home/lijunxing/MyFirstProject/requirements.txt
