@@ -7,8 +7,9 @@ pipeline {
                 retry(3){
                  sh 'pip install -r requirements.txt'
                 }
-                timeout(time:3,unit:'MINUTES')
-                sh 'python run.py'
+                timeout(time:3,unit:'MINUTES'){
+                   sh 'python run.py'
+                }
             }
         }
     }
