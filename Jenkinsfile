@@ -4,12 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                retry(3){
-                 sh 'pip install -r requirements.txt'
-                }
-                timeout(time:3,unit:'MINUTES'){
-                   sh 'python run.py'
-                }
+                sh 'docker build -t myproject .'
+                sh 'docker run -it myproject'
             }
         }
     }
