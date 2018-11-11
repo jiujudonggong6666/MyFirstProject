@@ -4,16 +4,6 @@
 
 import  os
 import  time
-
-def git_down_project():
-    print("gitproject")
-    print("正在更新对应的项目")
-    os.popen("git pull origin master")
-    print("等待项目更新完毕")
-    time.sleep(15)
-    print("项目更新完成")
-
-
 def find_uwsgi():
     print("查找uwsgi进程服务")
     uwsgiList =os.popen("ps -ef |grep uwsgi | awk '{print $2}'").readlines()
@@ -46,7 +36,6 @@ def start_uwsgi():
         print("end")
 
 def restart_uwsgi():
-    git_down_project()
     uwsgiList=find_uwsgi()
     kill_uwsgi(uwsgiList)
     start_uwsgi()
